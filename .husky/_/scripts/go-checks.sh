@@ -39,7 +39,7 @@ if [ -n "$UNFORMATTED_FILES" ]; then
     exit 1
 fi
 
-output=$(golangci-lint run --config=.github/.golangci.yml --new-from-rev=HEAD 2>&1)
+output=$(golangci-lint run --config=.github/.golangci.yml --new-from-rev=HEAD --path-prefix=. $STAGED_GO_FILES 2>&1)
 exit_code=$?
 
 if [ $exit_code -eq 0 ]; then
