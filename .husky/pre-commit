@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+sh "$(dirname "$0")/_/scripts/go-checks.sh"
+RESULT=$?
+if [ $RESULT != 0 ]; then
+    exit $RESULT
+fi
