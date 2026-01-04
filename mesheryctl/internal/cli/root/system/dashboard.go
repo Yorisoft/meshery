@@ -176,9 +176,9 @@ Note: Meshery's web-based user interface is embedded in Meshery Server and is av
 				utils.Log.Info("Meshery UI available at: ", mesheryURL)
 				utils.Log.Info("Opening Meshery UI in default browser...")
 				err = utils.NavigateToBrowser(mesheryURL)
-							if err != nil {
-									utils.Log.Warn(errors.Wrapf(err, "Opening Meshery UI in browser at %v.", currCtx.GetEndpoint()))
-							}
+						if err != nil {
+								utils.Log.Warn(errors.Wrapf(err, "Opening Meshery UI in browser at %v.", currCtx.GetEndpoint()))
+						}
 
 				<-portforward.GetStop()
 				return nil
